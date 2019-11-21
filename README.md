@@ -20,6 +20,8 @@
 [okHttp](https://square.github.io/okhttp/)
 [Fastjson](https://mvnrepository.com/artifact/com.alibaba/fastjson)
 [H2](https://mvnrepository.com/artifact/com.h2database/h2/1.4.200)
+[flyway数据库版本控制，但是我不会用](https://flywaydb.org/)
+[Lombok](https://projectlombok.org/)
 ##MAVEN包
 ````
 okHttp:
@@ -57,7 +59,13 @@ mysql
     spring.datasource.password=jswkys123456
     spring.datasource.driver-class-name=com.mysql.jdbc.Driver  
   ````      
-        
-      
+   ````
+   Lombok
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.6</version>
+        </dependency>
+   ````    
 
 
