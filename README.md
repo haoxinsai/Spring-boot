@@ -9,8 +9,8 @@
 [maven网站](https://mvnrepository.com)
 [H2](http://www.h2database.com/html/main.html)
 [Mybatis-SpringBoot](https://mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/index.html)
-[Spring Boot]（https://docs.spring.io/spring-boot/docs/2.0.0.RC1/reference/htmlsingle/#boot-features-embedded-database-support）
-
+[Spring Boot](https://docs.spring.io/spring-boot/docs/2.0.0.RC1/reference/htmlsingle/#boot-features-embedded-database-support)
+[Thymeleaf](https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#setting-attribute-values)
 
 
 
@@ -22,6 +22,7 @@
 [H2](https://mvnrepository.com/artifact/com.h2database/h2/1.4.200)
 [flyway数据库版本控制，但是我不会用](https://flywaydb.org/)
 [Lombok](https://projectlombok.org/)
+[Spring Boot自动部署,在第20的位置](https://docs.spring.io/spring-boot/docs/2.0.0.RC1/reference/htmlsingle/#boot-features-embedded-database-support)
 ##MAVEN包
 ````
 okHttp:
@@ -59,13 +60,20 @@ mysql
     spring.datasource.password=jswkys123456
     spring.datasource.driver-class-name=com.mysql.jdbc.Driver  
   ````      
-   ````
+  ````
    Lombok
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.6</version>
         </dependency>
-   ````    
-
+  ````    
+  ````
+    Spring Boot自动部署
+  <dependency> 
+  		<groupId> org.springframework.boot </ groupId> 
+  		<artifactId> spring-boot-devtools </ artifactId> 
+  		<optional> true </ optional> 
+  	</ dependency> 
+````
 

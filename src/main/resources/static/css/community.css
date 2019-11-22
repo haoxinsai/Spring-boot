@@ -10,3 +10,14 @@ body{
     float: right;
     margin-bottom: 15px;
 }
+
+.headPortrait{
+    width: 45px;
+    height: 45px;
+}
+
+.text-span{
+    font-size: 12px;
+    font-weight: normal;
+    color: #999;
+}
