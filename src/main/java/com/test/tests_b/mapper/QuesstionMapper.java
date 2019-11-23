@@ -4,6 +4,7 @@ package com.test.tests_b.mapper;
 import com.test.tests_b.model.Quesstion;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
@@ -12,6 +13,8 @@ import java.util.List;
 public interface QuesstionMapper {
     @Insert("insert into quesstion (title,description,gmt_create,gmt_modified,creator,tag) values (#{title},#{description},#{gmtCreate},#{gmtModified},#{creator},#{tag})")
     void creat(Quesstion quesstion);
-    @Select("select * from quesstion")
-    List<Quesstion> list();
+    @Select("select * from quesstion limit #{offset},#{size} ")
+    List<Quesstion> list(@Param(value = "offset") Integer offset,@Param(value = "size") Integer size);
+    @Select("select count(1) from  quesstion")
+    Integer count();
 }
