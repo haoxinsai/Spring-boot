@@ -32,13 +32,13 @@ public class QuestionService {
         }
 
 
-        if(page<1){
-            page=1;
-        }
         if(page>totalPage){
             page=totalPage;
         }
 
+        if(page<1){
+            page=1;
+        }
         paginationDTO.setPagination(totalPage,page);
         //size*(page-1)
         Integer offset = size * (page - 1);
@@ -92,5 +92,16 @@ public class QuestionService {
         }
         paginationDTO.setQuestion(questionDTOList);
         return paginationDTO;
+    }
+
+
+    public QuestionDTO getById(Integer id) {
+        Quesstion quesstion = quesstionMapper.getById(id);
+        QuestionDTO questionDTO =new QuestionDTO();
+        User user = userMapper.findById(quesstion.getCreator());
+        questionDTO.setUser(user);
+        BeanUtils.copyProperties(quesstion,questionDTO);
+
+        return questionDTO;
     }
 }
